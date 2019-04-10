@@ -13,12 +13,6 @@ public class TestDateUtils {
     private LocalDate startDate;
     private LocalDate endDate;
 
-    @Before
-    public void parseToLocalDate(){
-        startDate = DateUtils.parseStringToLocalDate("2019-04-10");
-        endDate = DateUtils.parseStringToLocalDate("2019-05-10");
-    }
-
     @Test
     public void shouldReturnFalseForProperDate() throws InvalidDateException {
         startDate = DateUtils.parseStringToLocalDate("2019-04-10");
