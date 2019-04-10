@@ -1,5 +1,6 @@
 package RentingSystem.reservation;
 
+import RentingSystem.Exceptions.InvalidDateException;
 import RentingSystem.participant.Participant;
 import RentingSystem.Utils.RentingUtils;
 import RentingSystem.participant.Sex;
@@ -8,7 +9,7 @@ import java.time.LocalDate;
 
 public class ReservationServiceBean implements ReservationService {
     @Override
-    public Participant createParticipant() {
+    public Participant createParticipant() throws InvalidDateException {
         System.out.println("Podaj imię użytkownika: ");
         String firstName = RentingUtils.insertData();
         System.out.println("Podaj nazwisko użytkownika: ");
@@ -20,7 +21,7 @@ public class ReservationServiceBean implements ReservationService {
         System.out.println("Podaj datę rozpoczącia rezerwacji w formacie yyyy-MM-dd");
         LocalDate startReservation = RentingUtils.parseStringToLocalDate(RentingUtils.insertData());
         System.out.println("Podaj datę zakończenia rezerwacji w foramcie yyyy-MM-dd");
-        LocalDate endReservation = RentingUtils.parseStringToLocalDate(RentingUtils.insertData());
+        LocalDate endReservation = RentingUtils.getEndReservationDate(startReservation);
 
         Participant participant = new Participant(firstName,lastName,age,sex,startReservation,endReservation);
         System.out.println(participant.toString());
