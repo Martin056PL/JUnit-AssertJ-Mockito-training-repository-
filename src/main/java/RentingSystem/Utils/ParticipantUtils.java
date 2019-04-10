@@ -18,10 +18,6 @@ public class ParticipantUtils {
         return scanner.nextLine();
     }
 
-    public static LocalDate parseStringToLocalDate(String date) {
-        return LocalDate.parse(date);
-    }
-
     public static Enum<Sex> setSexByFirstName(String name) {
         if (name.endsWith("a")) {
             List<String> ExceptionNamesList = new LinkedList<>();

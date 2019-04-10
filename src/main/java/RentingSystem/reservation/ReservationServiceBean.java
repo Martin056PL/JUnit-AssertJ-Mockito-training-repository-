@@ -23,7 +23,7 @@ public class ReservationServiceBean implements ReservationService {
         System.out.println("Płeć automatycznie dopasowana na podstawie imienia");
         Enum<Sex> sex = ParticipantUtils.setSexByFirstName(firstName);
         System.out.println("Podaj datę rozpoczącia rezerwacji w formacie yyyy-MM-dd");
-        LocalDate startReservation = ParticipantUtils.parseStringToLocalDate(ParticipantUtils.insertData());
+        LocalDate startReservation = DateUtils.parseStringToLocalDate(ParticipantUtils.insertData());
         System.out.println("Podaj datę zakończenia rezerwacji w foramcie yyyy-MM-dd");
         LocalDate endReservation = DateUtils.getEndReservationDate(startReservation);
 

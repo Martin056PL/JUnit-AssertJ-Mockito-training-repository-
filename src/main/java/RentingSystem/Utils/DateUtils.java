@@ -26,11 +26,15 @@ public class DateUtils {
         return endReservationDate;
     }
 
-    private static boolean doesReservationDatesAreCorrect(LocalDate startReservationDate, LocalDate endReservationDate) throws InvalidDateException {
+    public static boolean doesReservationDatesAreCorrect(LocalDate startReservationDate, LocalDate endReservationDate) throws InvalidDateException {
         boolean startIsAfterEnd = startReservationDate.isAfter(endReservationDate);
         boolean endIsBeforeStart = endReservationDate.isBefore(startReservationDate);
         if (startIsAfterEnd || endIsBeforeStart) {
             throw new InvalidDateException();
         } else return false;
+    }
+
+    public static LocalDate parseStringToLocalDate(String date) {
+        return LocalDate.parse(date);
     }
 }
