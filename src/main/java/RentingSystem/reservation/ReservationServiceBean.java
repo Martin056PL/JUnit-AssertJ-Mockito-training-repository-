@@ -33,11 +33,11 @@ public class ReservationServiceBean implements ReservationService {
     }
 
     @Override
-    public List<Participant> findParticipantForName() {
+    public List<Participant> findParticipantForFirstName() {
         System.out.println("Wpisz imię po którym mam wyszukać rezerwacje: ");
         String name = ParticipantUtils.insertData();
         ReservationRepository repository = new ReservationRepository();
-        List<Participant> allParticipantRepository = repository.getParticipantsList();
+        List<Participant> allParticipantRepository = repository.getDefaultParticipantsList();
         List<Participant> selectedParticipantRepository = new LinkedList<>();
         for (Participant participant : allParticipantRepository) {
             if (participant.getFirstName().equals(name)) {

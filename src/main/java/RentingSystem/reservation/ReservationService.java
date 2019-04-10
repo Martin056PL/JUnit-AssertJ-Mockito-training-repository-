@@ -8,6 +8,6 @@ import java.util.List;
 public interface ReservationService {
 
     Participant createParticipant() throws InvalidDateException;
-    List<Participant> findParticipantForName();
+    List<Participant> findParticipantForFirstName();
 
 }

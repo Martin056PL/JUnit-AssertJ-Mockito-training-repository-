@@ -1,0 +1,6 @@
+[{firstName='Marek'; lastName='Darek'; age=30; sex=M; startReservation=2019-04-10; endReservation=2019-04-13}
+, {firstName='Krzyś'; lastName='Nowak'; age=18; sex=M; startReservation=2019-03-21; endReservation=2019-04-10}
+, {firstName='Maria'; lastName='Kowalska'; age=40; sex=F; startReservation=2019-04-09; endReservation=2019-04-15}
+, {firstName='Maria'; lastName='Wolska'; age=40; sex=F; startReservation=2019-04-09; endReservation=2019-04-15}
+, {firstName='Maria'; lastName='Banach'; age=40; sex=F; startReservation=2019-04-09; endReservation=2019-04-15}
+]

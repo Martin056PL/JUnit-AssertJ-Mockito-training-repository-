@@ -72,14 +72,13 @@ public class Participant {
 
     @Override
     public String toString() {
-        return "Participant{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", age=" + age +
-                ", sex=" + sex +
-                ", startReservation=" + startReservation +
-                ", endReservation=" + endReservation +
-                '}';
+        return  "{firstName='" + firstName + '\'' +
+                "; lastName='" + lastName + '\'' +
+                "; age=" + age +
+                "; sex=" + sex +
+                "; startReservation=" + startReservation +
+                "; endReservation=" + endReservation +
+                "}\n";
     }
 
     @Override

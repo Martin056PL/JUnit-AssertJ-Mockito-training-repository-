@@ -9,11 +9,11 @@ import java.util.List;
 
 public class ReservationRepository {
 
-    public List<Participant> getParticipantsList() {
-        return defaultParticipants();
+    public List<Participant> getDefaultParticipantsList() {
+        return defaultParticipantsList();
     }
 
-    private List<Participant> defaultParticipants() {
+    private List<Participant> defaultParticipantsList() {
         List<Participant> participantList = new LinkedList<>();
         Participant participant1 = new Participant("Marek", "Darek",
                 30, Sex.M, LocalDate.now(), LocalDate.now().plusDays(3));
@@ -32,4 +32,11 @@ public class ReservationRepository {
         participantList.add(participant5);
         return participantList;
     }
+    /*public List<Participant> loadParticipantListFromFile(){
+        List<Participant> participantsList = new LinkedList<>();
+        for (Participant participant : participantsList) {
+
+        }
+    }*/
+
 }
