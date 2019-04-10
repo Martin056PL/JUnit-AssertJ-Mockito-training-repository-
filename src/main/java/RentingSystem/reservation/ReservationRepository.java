@@ -21,9 +21,15 @@ public class ReservationRepository {
                 18, Sex.M, LocalDate.of(2019, 3, 21), LocalDate.now());
         Participant participant3 = new Participant("Maria", "Kowalska",
                 40, Sex.F, LocalDate.of(2019, 4, 9), LocalDate.of(2019, 4, 15));
+        Participant participant4 = new Participant("Maria", "Wolska",
+                40, Sex.F, LocalDate.of(2019, 4, 9), LocalDate.of(2019, 4, 15));
+        Participant participant5 = new Participant("Maria", "Banach",
+                40, Sex.F, LocalDate.of(2019, 4, 9), LocalDate.of(2019, 4, 15));
         participantList.add(participant1);
         participantList.add(participant2);
         participantList.add(participant3);
+        participantList.add(participant4);
+        participantList.add(participant5);
         return participantList;
     }
 }
